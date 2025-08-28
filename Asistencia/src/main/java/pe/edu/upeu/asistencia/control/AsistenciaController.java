@@ -13,34 +13,15 @@ import pe.edu.upeu.asistencia.servicio.EstudianteServicio;
 @Controller
 public class AsistenciaController {
 
-    @Autowired
-    private EstudianteServicio estudianteServicio;
+    @FXML TextField txtNum1;
+    @FXML TextField txtNum2;
+    @FXML Label txtResult;
+public void sumar() {
+    double num1 = Double.parseDouble(txtNum1.getText());
+    double num2 = Double.parseDouble(txtNum2.getText());
+    double resultado = num1 + num2;
 
-    @FXML private Label idMsg;
-    @FXML TextField txtDato;
+    txtResult.setText(String.valueOf(resultado));
+  }
 
-
-    @FXML
-    void enviar(){
-        System.out.println("Enviando asistencia");
-        idMsg.setText(txtDato.getText());
-    }
-
-
-    @FXML
-    void regEstudiante(){
-
-        Estudiante estudiante=new Estudiante();
-        estudiante.setNombre(new SimpleStringProperty("David"));
-        estudiante.setEstado(new SimpleBooleanProperty(true));
-
-        estudianteServicio.saveEntidad(estudiante);
-        listarEstudiantes();
-    }
-
-    void listarEstudiantes(){
-        for (Estudiante e: estudianteServicio.findAllEntidades()){
-            System.out.println(e.getNombre());
-        }
-    }
 }

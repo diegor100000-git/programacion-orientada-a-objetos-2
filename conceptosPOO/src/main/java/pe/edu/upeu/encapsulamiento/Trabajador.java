@@ -20,5 +20,6 @@ public class Trabajador {
         return  "tiene las siguientes caracteristicas: \n"+
                 "Nombre:"+nombre+"\n"+
                 "Apellido:"+apellido+"\n";
+
     }
 }

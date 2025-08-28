@@ -10,30 +10,33 @@ import java.util.List;
 @Service
 public class EstudianteServicioImp extends EstudianteRepositorio implements EstudianteServicio {
 
-    List<Estudiante> listaEstudiantes=new ArrayList<>();
-
     @Override
-    public void saveEntidad(Estudiante estudiante) {
-        listaEstudiantes.add(estudiante);
+    public void save(Estudiante estudiante) {
+        estudiantes.add(estudiante);
+
     }
 
     @Override
-    public List<Estudiante> findAllEntidades() {
-        return listaEstudiantes;
+    public List <Estudiante>findAllEstudiantes(){
+        if(estudiantes.size()==1){
+            return super.findAllEstudiantes();
+        }
+        return estudiantes;
     }
 
     @Override
-    public void updateEntidad(Estudiante estudiante, int index) {
-        listaEstudiantes.set(index,estudiante);
+    public Estudiante updateEstudiante(Estudiante estudiante, int index) {
+        return estudiantes.set(index,estudiante);
     }
 
     @Override
-    public void deleteEntidad(int index) {
-        listaEstudiantes.remove(index);
+    public void delete(int index) {
+         estudiantes.remove(index);
     }
 
     @Override
-    public Estudiante findEntidad(int index) {
-        return listaEstudiantes.get(index);
+    public Estudiante findEstudianteById(int index) {
+        return estudiantes.get(index);
     }
 }
+

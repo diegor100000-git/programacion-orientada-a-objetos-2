@@ -3,11 +3,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.asistencia.control.AsistenciaController">
+<AnchorPane prefHeight="481.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.asistencia.control.AsistenciaController">
    <children>
-      <TextField fx:id="txtNum1" layoutX="151.0" layoutY="92.0" prefHeight="25.0" prefWidth="193.0" text="david" />
-      <Button layoutX="357.0" layoutY="92.0" mnemonicParsing="false" onAction="#sumar" text="Enviar" />
-      <Label fx:id="txtResult" layoutX="151.0" layoutY="123.0" text="Label" />
-      <Button layoutX="423.0" layoutY="92.0" mnemonicParsing="false" text="Agregar" />
+      <Label layoutX="70.0" layoutY="34.0" prefHeight="17.0" prefWidth="56.0" text="ejemplo" />
+      <TextField fx:id="txtNum1" layoutX="70.0" layoutY="92.0" />
+      <TextField fx:id="txtNum2" layoutX="254.0" layoutY="92.0" />
+      <Button layoutX="429.0" layoutY="92.0" mnemonicParsing="false" onAction="#sumar" text="sumar" />
+      <Label fx:id="txtResult" layoutX="70.0" layoutY="147.0" text="Label" />
    </children>
 </AnchorPane>

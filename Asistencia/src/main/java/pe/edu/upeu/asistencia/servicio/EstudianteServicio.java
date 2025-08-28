@@ -5,16 +5,16 @@ import pe.edu.upeu.asistencia.modelo.Estudiante;
 import java.util.List;
 
 public interface EstudianteServicio {
-    void saveEntidad(Estudiante estudiante);
+    void save(Estudiante estudiante);
 
-    List<Estudiante> findAllEntidades();
+    List<Estudiante> findAllEstudiantes();
 
-    void updateEntidad(Estudiante estudiante, int index);
+    Estudiante updateEstudiante (Estudiante estudiante, int index);
 
-    void deleteEntidad(int index);
+    void delete(int index);
 
 
-    Estudiante findEntidad(int index);
+    Estudiante findEstudianteById(int index);
 
 
 }
