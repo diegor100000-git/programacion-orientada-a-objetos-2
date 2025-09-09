@@ -7,7 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -29,6 +28,7 @@ public class AsistenciaApplication extends Application {
 		SpringApplicationBuilder builder = new SpringApplicationBuilder(AsistenciaApplication.class);
 		builder.application().setWebApplicationType(WebApplicationType.NONE);
 		configurableApplicationContext = builder.run(getParameters().getRaw().toArray(new String[0]));
+
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/maingui.fxml"));
 		fxmlLoader.setControllerFactory(configurableApplicationContext::getBean);
 		parent= fxmlLoader.load();
